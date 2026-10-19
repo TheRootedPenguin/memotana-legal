@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BookBubble Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memotana Privacy Policy</title>
 <style>
   body { font-family: system-ui, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
   h1 { font-size: 1.6em; }
@@ -12,44 +13,58 @@
 </head>
 <body>
 
-<h1>BookBubble Privacy Policy</h1>
-<p class="updated">Last updated: September 7, 2026</p>
+<h1>Memotana Privacy Policy</h1>
+<p class="updated">Last updated: October 19, 2026</p>
 
-<p>BookBubble ("the app") is a personal reading-library app. This policy explains what data the app handles and how.</p>
+<p>Memotana ("the app") is a personal reading-library app. This policy explains what data the app handles and how.</p>
 
 <h2>Summary</h2>
-<p>BookBubble does not have user accounts, does not require sign-in, and does not send your library, notes, or photos to any server operated by us. All of your book data, notes, and images are stored locally on your device.</p>
+<p>Memotana does not have user accounts and does not require sign-in. Your library, notes, and photos are stored only on your device and are never sent to us or anyone else. To look up book information, the app sends your book searches to Memotana's book catalog server. That server keeps short-lived technical logs (described below) and nothing else about you.</p>
 
 <h2>Data stored on your device</h2>
 <p>The following is saved only on your own device, using local app storage:</p>
 <ul>
   <li>Your saved books and their details (title, author, reading status, progress, etc.)</li>
-  <li>Notes you write, including any tags and locations you add</li>
-  <li>Photos you attach to notes (plain pictures and scanned quote images), stored in the app's private local storage</li>
-  <li>Your app preferences (e.g. date format, progress bar setting)</li>
+  <li>Notes you write, including any titles, quotes, tags, and locations you add</li>
+  <li>Pictures you attach to notes and custom book covers you choose, stored in the app's private local storage</li>
+  <li>Your recent barcode scans and your app preferences (e.g. language, date format, progress bar setting)</li>
 </ul>
-<p>This data is not transmitted to us or to any third party. It stays on your device unless you choose to export it (see below).</p>
+<p>This data is not transmitted to us or to any third party. It stays on your device unless you choose to export or share it (see below).</p>
 
 <h2>Camera and photo library access</h2>
-<p>BookBubble requests camera and photo library permissions so you can attach pictures to notes and scan quotes from a book page. Photos you choose are saved to the app's local storage on your device and are not uploaded anywhere.</p>
+<p>Memotana requests camera and photo library permissions so you can scan book barcodes, attach pictures to notes, set custom book covers, and scan text from a book page. Pictures you choose are saved to the app's local storage on your device and are not uploaded anywhere.</p>
 
 <h2>On-device text recognition (OCR)</h2>
-<p>When you scan a quote, BookBubble uses on-device text recognition (Google ML Kit) to read text from the image you select. This processing happens entirely on your device. No image or recognized text is sent to any external server for this purpose.</p>
+<p>When you scan a page to capture a quote or a description, Memotana uses on-device document scanning and text recognition (Google ML Kit) to read the text. This processing happens entirely on your device. The scanned image is used only while you select the text you want, then discarded. It is not saved, and no image or recognized text is sent to any server.</p>
 
-<h2>Book search (Open Library)</h2>
-<p>When you search for a book by title, author, or ISBN, BookBubble sends your search terms to the Open Library API (openlibrary.org), an external, third-party service, to retrieve book information and cover images. No account information, notes, or personal data is sent as part of these requests — only the search text you enter. Please refer to <a href="https://openlibrary.org/dev/docs/api/policies" target="_blank" rel="noopener">Open Library's own policies</a> for how they handle these requests.</p>
+<h2>Book search and book information</h2>
+<p>To find books and show their details, the app sends requests to Memotana's own book catalog server (api.memotana.com). The catalog is built from <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>'s public data. These requests contain:</p>
+<ul>
+  <li>The search text you type (title, author, or ISBN), or the ISBN read from a barcode you scan</li>
+  <li>Catalog identifiers of books, editions, or authors you open</li>
+  <li>The title and author of a saved book you open that isn't yet matched to the catalog, so the app can match it</li>
+</ul>
+<p>No account information, notes, photos, or library contents are sent. Like any web server, the catalog server also receives your device's IP address and basic technical information (such as the app's user agent) with each request.</p>
+<p>Book cover images are loaded directly from Open Library's cover service (covers.openlibrary.org), and tapping an Open Library link opens openlibrary.org in your browser. Those requests go to Open Library, which receives your IP address and the cover or page requested. See <a href="https://openlibrary.org/dev/docs/api/policies" target="_blank" rel="noopener">Open Library's policies</a> for how they handle them.</p>
 
-<h2>Data export and deletion</h2>
-<p>You can export a backup of your books and notes as a JSON file from within the app (Settings), and you can clear all local app data from the same screen at any time. Since BookBubble does not store your data on any server, deleting the app or clearing its data removes your information entirely — we do not retain a copy.</p>
+<h2>Server logs</h2>
+<p>The catalog server records a technical log entry for each request: the date and time, IP address, the request itself (including any search text or ISBN), and the user agent. These logs are used only to keep the service running, fix problems, and prevent abuse. Your IP address is also used to apply rate limits, through counters kept in memory only. Logs are deleted after [RETENTION PERIOD]. They are not used to build profiles, are not combined with any other data, and are not sold or shared, except as required by law.</p>
+<p>The server is hosted on a server in France (EU). Requests pass through Cloudflare, which acts as a network and security provider for the service and processes them on our behalf.</p>
+
+<h2>Data export, sharing, and deletion</h2>
+<p>From Settings, you can export a backup of your books, notes, and pictures as a file, import a backup, and share your reading list as text. These files go only where you choose to save or send them. You can also clear all local app data from Settings at any time. Since your library is stored only on your device, deleting the app or clearing its data removes it entirely. We do not keep a copy.</p>
 
 <h2>Data we do not collect</h2>
-<p>BookBubble does not collect analytics, does not use advertising identifiers, does not require any account or sign-in, and does not share data with third parties for advertising or marketing purposes.</p>
+<p>Memotana does not collect analytics, does not use advertising identifiers, does not require any account or sign-in, and does not share data with third parties for advertising or marketing purposes.</p>
+
+<h2>Your rights</h2>
+<p>Since the catalog server's logs are not linked to any account or name, we generally cannot identify which entries are yours. If you have a question or request about data the server may hold, for example under the EU General Data Protection Regulation (GDPR), contact us at the address below.</p>
 
 <h2>Children's privacy</h2>
-<p>BookBubble does not knowingly collect personal information from anyone, including children, since no personal information is collected or transmitted by the app at all.</p>
+<p>Memotana does not knowingly collect personal information from children. The app has no accounts, and the only data that leaves the device is the book lookups and technical logs described above.</p>
 
 <h2>Changes to this policy</h2>
-<p>If BookBubble's data practices change in the future (for example, if account-based features are introduced), this policy will be updated accordingly, and the "Last updated" date above will reflect that change.</p>
+<p>If Memotana's data practices change in the future (for example, if account-based features are introduced), this policy will be updated accordingly, and the "Last updated" date above will reflect that change.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy can be sent to: <a href="mailto:therootedpenguin@gmail.com">therootedpenguin@gmail.com</a></p>
